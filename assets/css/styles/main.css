@@ -1,0 +1,60 @@
+main {
+    padding: 1.25em 3.5em;
+}
+
+.main-card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: 
+        "city city ."
+        "date temp img"
+        "temp-cond temp img";
+    /* grid-template-columns: 45% 25% 25%;
+    grid-template-rows: 40% 30% 30%; */
+    align-items: center;
+    justify-items: start;
+    border-top: .1em solid black; border-bottom: .1em solid black;
+    padding: 1em;
+}
+
+.city {
+    grid-area: city;
+    font-family: var(--logo-font);
+    font-size: 1.35rem;
+}
+
+.date {
+    grid-area: date;
+    font-size: .85rem;
+}
+
+.temp-condition {
+    grid-area: temp-cond;
+    font-family: var(--logo-font);
+}
+
+.temperature {
+    font-family: var(--logo-font);
+    grid-area: temp;
+    place-self: center;
+    font-size: 2.75rem;
+}
+
+.temp-img {
+    grid-area: img;
+}
+
+.more-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nxt-day {
+    display: flex;
+    justify-content: space-around;
+    border-top: .1em solid black; border-bottom: .1em solid black;
+    padding: .25em .5em;
+    margin: .25em 0;
+}
+
