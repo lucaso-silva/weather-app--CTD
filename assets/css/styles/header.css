@@ -1,0 +1,28 @@
+header {
+    padding: 1.25em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.container-input {
+    display: none;
+}
+
+.search-icon {
+    width: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .container-input {
+        display: block;
+    }
+
+    .search-icon {
+        display: none;
+    }
+}

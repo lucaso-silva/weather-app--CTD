@@ -1,0 +1,16 @@
+@import url(../css/styles/header.css);
+
+:root {
+    --logo-font: 'Lobster', cursive;
+    --main-font: 'Sansita', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: var(--main-font);
+    font-size: 16px;
+}
