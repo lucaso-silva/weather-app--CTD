@@ -58,3 +58,128 @@ main {
     margin: .25em 0;
 }
 
+.img-day-condition1, 
+.img-day-condition2, 
+.img-day-condition3 {
+    width: 25px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas:
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info"
+        "mc mc mc m-info m-info";
+    }
+
+    .main-card {
+        grid-area: mc;
+    }
+
+    .more-info {
+        grid-area: m-info;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas: 
+        "day1 day1"
+        "day1 day1"
+        "day1 day1"
+        "day2 day2"
+        "day2 day2"
+        "day2 day2"
+        "day3 day3"
+        "day3 day3"
+        "day3 day3";
+    }
+
+    .nxt-day1 {
+        grid-area: day1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "img1 img1"
+        "date1 date1"
+        "max1 min1";
+    }
+
+    .nxt-day2 {
+        grid-area: day2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "img2 img2"
+        "date2 date2"
+        "max2 min2";
+    }
+
+    .nxt-day3 {
+        grid-area: day3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "img3 img3"
+        "date3 date3"
+        "max3 min3";
+    }
+
+    .img-day--condition1 {
+        grid-area: img1;
+    }
+
+    .nxt-day--date1 {
+        grid-area: date1;
+    }
+
+    .nxt-day--max1 {
+        grid-area: max1;
+    }
+
+    .ntx-day--min1 {
+        grid-area: min1;
+    }
+
+    .img-day--condition2 {
+        grid-area: img2;
+    }
+
+    .nxt-day--date2 {
+        grid-area: date2;
+    }
+
+    .nxt-day--max2 {
+        grid-area: max2;
+    }
+
+    .ntx-day--min2 {
+        grid-area: min2;
+    }
+
+    .img-day--condition3 {
+        grid-area: img3;
+    }
+
+    .nxt-day--date3 {
+        grid-area: date3;
+    }
+
+    .nxt-day--max3 {
+        grid-area: max3;
+    }
+
+    .ntx-day--min3 {
+        grid-area: min3;
+    }
+}

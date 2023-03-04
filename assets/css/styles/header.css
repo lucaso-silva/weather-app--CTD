@@ -45,8 +45,8 @@ header {
         border-radius: 10px;
         padding: 0.25em .75em;
         background-color: transparent;
-        border: .15em solid #FFFFFF;
-        color: #FFFFFF;
+        border: .15em solid var(--white);
+        color: var(--white);
         font-weight: 700;
     }
 }

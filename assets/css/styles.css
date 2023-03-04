@@ -1,11 +1,12 @@
 @import url(../css/styles/header.css);
 @import url(../css/styles/main.css);
-
+@import url(../css/styles/footer.css);
 
 :root {
     --logo-font: 'Lobster', cursive;
     --main-font: 'Sansita', sans-serif;
     --bg-color: linear-gradient(to right, #2e3192, #27adad, #11314e);
+    --white: #FFFFFF;
 }
 
 * {

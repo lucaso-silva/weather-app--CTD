@@ -1,0 +1,6 @@
+footer p {
+    font-size: .85rem;
+    color: var(--white);
+    text-align: center;
+    margin-top: 1.25em;
+}
