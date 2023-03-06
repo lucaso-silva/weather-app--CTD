@@ -1,8 +1,10 @@
 .header {
+    background: var(--bg-color);
     padding: 1.25em;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: .125em solid black;
 }
 
 .header-mobile--open {

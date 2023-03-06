@@ -1,6 +1,12 @@
+footer {
+    background: var(--bg-color);
+    border-top: .125em solid black;
+    padding-right: 1em;
+}
+
 footer p {
-    font-size: .85rem;
-    color: var(--white);
-    text-align: center;
-    margin-top: 1.25em;
+    font-family: var(--logo-font);
+    font-size: .75rem;
+    text-align: end;
+    padding: 1.5em 0;
 }

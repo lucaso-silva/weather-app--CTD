@@ -5,7 +5,7 @@
 :root {
     --logo-font: 'Lobster', cursive;
     --main-font: 'Sansita', sans-serif;
-    --bg-color: linear-gradient(to right, #2e3192, #27adad, #11314e);
+    --bg-color: linear-gradient(to right, #80fbff, #dad184, #e67b17);
     --white: #FFFFFF;
 }
 
@@ -15,7 +15,6 @@
 }
 
 body {
-    background: var(--bg-color);
     font-family: var(--main-font);
     font-size: 16px;
 }

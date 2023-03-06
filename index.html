@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeatherApp - Developed by Lucas Oliveira</title>
+    <title>WeatherApp - by Lucas Oliveira</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lobster&family=Sansita:ital,wght@0,400;0,700;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -20,38 +21,40 @@
         <img src="./assets/img/WeatherApp-2.svg" alt="Logo WeatherApp" class="logo">
         <div class="container-input">
             <input type="text" placeholder="Search for..." class="input">
-            <button type="button" class="btn-src">Search</button>
+            <button type="search" class="btn-src">Search</button>
         </div>
         <img src="./assets/img/world-search.svg" alt="Icon search" class="search-icon">
     </header>
     <main>
-        <section class="main-card">
-            <h2 class="city">New Westminster</h2>
-            <p class="date">Fri, 20:13</p>
-            <p class="temp-condition">Partly Cloudy</p>
-            <p class="temperature">5º</p>
-            <img src="./assets/img/weather-icons/cloudy_snowing.svg" alt="Icons temperature conditions" class="temp-img">
-        </section>
-        <section class="more-info">
-            <div class="nxt-day nxt-day1">
-                <img src="./assets/img/weather-icons/sunny_snowing.svg" alt="Icon temperature conditions" class="img-day--condition1">
-                <p class="nxt-day--date1">Sat 03</p>
-                <p class="nxt-day--max1">6º</p>
-                <p class="nxt-day--min1">1º</p>
-            </div>
-            <div class="nxt-day nxt-day2">
-                <img src="./assets/img/weather-icons/snowing.svg" alt="Icon temperature conditions" class="img-day--condition2">
-                <p class="nxt-day--date2">Sun 04</p>
-                <p class="nxt-day--max2">8º</p>
-                <p class="nxt-day--min2">0º</p>
-            </div>
-            <div class="nxt-day nxt-day3">
-                <img src="./assets/img/weather-icons/sunny.svg" alt="Icon temperature conditions" class="img-day--condition3">
-                <p class="nxt-day--date3">Mon 05</p>
-                <p class="nxt-day--max3">11º</p>
-                <p class="nxt-day--min3">4º</p>
-            </div>
-        </section>
+        <div class="main">
+            <section class="main-card">
+                <h2>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="city">New Westminster</span>
+                    <img src="https://countryflagsapi.com/svg/can" alt="Bandeira País" class="country-flag">
+                </h2>
+                <p class="temp-condition">Partly Cloudy</p>
+                <p class="temperature"><span>10</span>&deg;C</p>
+                <img src="./assets/img/weather-icons/cloudy_snowing.svg" alt="Icons temperature conditions" class="temp-img">
+            </section>
+            <section class="more-info">
+                <div class="wind-humidity">
+                    <p class="wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <span></span>
+                    </p>
+                    <p id="umidity">
+                        <i class="fa-solid fa-droplet"></i> 
+                        <span></span>
+                    </p>
+                </div>
+                <div class="temperature-range">
+                    <p class="max-temp">Max. Temp. <span>12</span>&deg;C</p>
+                    <p class="min-temp">Min. Temp. <span>3</span>&deg;C</p>
+                    <p class="feels-like">Feels like <span>5</span>&deg;C</p>
+                </div>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <p>Developed by Lucas Oliveira</p>
