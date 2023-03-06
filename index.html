@@ -11,7 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lobster&family=Sansita:ital,wght@0,400;0,700;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -25,41 +27,39 @@
         </div>
         <img src="./assets/img/world-search.svg" alt="Icon search" class="search-icon">
     </header>
-    <main>
-        <div class="main">
-            <section class="main-card">
-                <h2>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span class="city">New Westminster</span>
-                    <img src="https://countryflagsapi.com/svg/can" alt="Bandeira País" class="country-flag">
-                </h2>
-                <p class="temp-condition">Partly Cloudy</p>
-                <p class="temperature"><span>10</span>&deg;C</p>
-                <img src="./assets/img/weather-icons/cloudy_snowing.svg" alt="Icons temperature conditions" class="temp-img">
-            </section>
-            <section class="more-info">
-                <div class="wind-humidity">
-                    <p class="wind">
-                        <i class="fa-solid fa-wind"></i>
-                        <span></span>
-                    </p>
-                    <p id="umidity">
-                        <i class="fa-solid fa-droplet"></i> 
-                        <span></span>
-                    </p>
-                </div>
-                <div class="temperature-range">
-                    <p class="max-temp">Max. Temp. <span>12</span>&deg;C</p>
-                    <p class="min-temp">Min. Temp. <span>3</span>&deg;C</p>
-                    <p class="feels-like">Feels like <span>5</span>&deg;C</p>
-                </div>
-            </section>
-        </div>
+    <main class="main">
+        <section class="main-card">
+            <h2 class="city">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>New Westminster</span>
+            </h2>
+            <p class="temp-condition">Partly Cloudy</p>
+            <p class="temperature"><span>10</span>&deg;C</p>
+            <img src="./assets/img/weather-icons/cloudy_snowing.svg" alt="Icons temperature conditions"
+                class="temp-img">
+        </section>
+        <section class="more-info">
+            <div class="wind-humidity">
+                <p class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>7m/s</span>
+                </p>
+                <p id="umidity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>58%</span>
+                </p>
+            </div>
+            <div class="temperature-range">
+                <p class="max-temp">Max. Temp. <span>12</span> &deg;C</p>
+                <p class="min-temp">Min. Temp. <span>3</span> &deg;C</p>
+                <p class="feels-like">Feels like <span>5</span> &deg;C</p>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <p>Developed by Lucas Oliveira</p>
     </footer>
-<script src="./assets/js/main.js" type="module"></script>
+    <script src="./assets/js/main.js" type="module"></script>
 </body>
 
 </html>

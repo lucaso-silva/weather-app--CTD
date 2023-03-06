@@ -1,6 +1,6 @@
 footer {
     background: var(--bg-color);
-    border-top: .125em solid black;
+    border-top: .125em solid var(--dark-blue);
     padding-right: 1em;
 }
 

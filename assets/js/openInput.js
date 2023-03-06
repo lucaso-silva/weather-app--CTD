@@ -8,4 +8,5 @@ export default function openInput() {
     logo.classList.add("logo-mobile--open");
     inputContainer.classList.add("container-input--mobile");
     searchIcon.classList.add("search-icon--mobile");
+    searchIcon.setAttribute("src", "./assets/img/close-icon.svg");
 }

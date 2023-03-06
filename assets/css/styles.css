@@ -6,7 +6,9 @@
     --logo-font: 'Lobster', cursive;
     --main-font: 'Sansita', sans-serif;
     --bg-color: linear-gradient(to right, #80fbff, #dad184, #e67b17);
-    --white: #FFFFFF;
+    --white: #FDFDFD;
+    --dark-blue: #00000E;
+    --red: #a52a2a;
 }
 
 * {

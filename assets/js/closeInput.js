@@ -8,4 +8,5 @@ export default function closeInput() {
     logo.classList.remove("logo-mobile--open");
     inputContainer.classList.remove("container-input--mobile");
     searchIcon.classList.remove("search-icon--mobile");
+    searchIcon.setAttribute("src", "./assets/img/world-search.svg")
 }
