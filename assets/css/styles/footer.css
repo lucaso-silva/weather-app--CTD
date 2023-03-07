@@ -5,7 +5,7 @@ footer {
 }
 
 footer p {
-    font-family: var(--logo-font);
+    font-family: var(--main-font);
     font-size: .75rem;
     text-align: end;
     padding: 1.5em 0;

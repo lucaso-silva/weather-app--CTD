@@ -40,6 +40,11 @@
     opacity: .5;
 }
 
+.searching-msg {
+    font-size: 1.25rem;
+    color: var(--red);
+}
+
 .error-msg {
     font-size: 1.125rem;
     text-align: center;

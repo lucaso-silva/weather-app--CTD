@@ -34,17 +34,25 @@ const getWeatherInfo = async (city) => {
 };
 
 const showWeatherInfo = async (city) => {
+  const loadingMsg = document.querySelector(".searching-msg");
+
+  loadingMsg.classList.remove("hide");
+  title.classList.add("hide");
+  mainCard.classList.add("hide");
+  moreInfo.classList.add("hide");
+  errorMsg.classList.add("hide");
+
   const data = await getWeatherInfo(city);
 
   if (data.cod === "404") {
     errorMsg.classList.remove("hide");
-    
+    loadingMsg.classList.add("hide");
+
     title.classList.add("hide");
     mainCard.classList.add("hide");
     moreInfo.classList.add("hide");
-
   } else {
-    title.classList.add("hide");
+    loadingMsg.classList.add("hide");
     errorMsg.classList.add("hide");
 
     mainCard.classList.remove("hide");
@@ -81,6 +89,7 @@ searchBtn.addEventListener("click", () => {
   if (city.length > 0) {
     input.classList.remove("input-empty");
     input.setAttribute("placeholder", "Search for a place..");
+
     showWeatherInfo(city);
 
     input.value = "";
@@ -97,6 +106,19 @@ input.addEventListener("keyup", (e) => {
   if (e.code === "Enter") {
     const city = e.target.value;
 
-    showWeatherInfo(city);
+    if (city.length > 0) {
+      input.classList.remove("input-empty");
+      input.setAttribute("placeholder", "Search for a place..");
+
+      showWeatherInfo(city);
+      input.value = "";
+      
+    } else {
+      input.classList.add("input-empty");
+      input.setAttribute("placeholder", "Input can't be empty..");
+      title.classList.remove("hide");
+      mainCard.classList.add("hide");
+      moreInfo.classList.add("hide");
+    }
   }
 });
