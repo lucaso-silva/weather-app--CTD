@@ -1,24 +1,47 @@
 import closeInput from "./closeInput.js";
-import { getWeatherInfo } from "./getWeatherInfo.js";
 import openInput from "./openInput.js";
-// import { getWeatherInfo } from "./getWeatherInfo.js";
 
 const btnMobile = document.querySelector(".search-icon");
 const searchBtn = document.querySelector(".btn-src");
+const input = document.querySelector(".input");
+
+const cityElement = document.querySelector("#city");
+const tempConditions = document.querySelector(".temp-condition");
+const temperature = document.querySelector("#temperature");
+const temperatureIcon = document.querySelector(".temp-img");
+const wind = document.querySelector("#wind");
+const humidity = document.querySelector("#humidity");
+const maxTemp = document.querySelector("#max-temp");
+const minTemp = document.querySelector("#min-temp");
+const feelsLike = document.querySelector("#feels-like");
+
 let inputIsOpen = false;
 
 const apiKey = "fa2e6e57dabe312d59e71999ddcd4ce6";
-const apiCountryURL = "https://countryflagsapi.com/png/"
+// const apiCountryURL = "https://countryflagsapi.com/png/"
 
-// const getWeatherInfo = async(city) => {
-//     const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 
-//     const  response = await fetch(apiWeatherURL);
-//     const data = response.json();
+const getWeatherInfo = async(city) => {
+    const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 
-//     console.log(data);
-// }
+    const  response = await fetch(apiWeatherURL);
+    const data = response.json();
 
+    return data;
+}
+
+const showWeatherInfo = async (city) => {
+    const data = await getWeatherInfo(city);
+
+    cityElement.innerHTML = data.name;
+    tempConditions.innerHTML = data.weather[0].description;
+    temperature.innerHTML = data.main.temp;
+    wind.innerHTML = data.wind.speed;
+    humidity.innerHTML = data.main.humidity;
+    maxTemp.innerHTML = data.main.temp_max;
+    minTemp.innerHTML = data.main.temp_min;
+    feelsLike.innerHTML = data.main.feels_like;
+}
 
 btnMobile.addEventListener("click", ()=> {
     if(!inputIsOpen) {
@@ -31,10 +54,10 @@ btnMobile.addEventListener("click", ()=> {
 });
 
 searchBtn.addEventListener("click", ()=>{
-    // e.preventDefault();
-
-    const input = document.querySelector(".input")
     const city = input.value;
 
-    getWeatherInfo(city); 
+    showWeatherInfo(city);
+
+    input.value = "";
 })
+

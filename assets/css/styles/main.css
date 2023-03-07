@@ -39,6 +39,7 @@
     align-self: center;
     font-family: var(--logo-font);
     font-size: .85rem;
+    text-transform: capitalize;
 }
 
 .temperature {

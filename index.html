@@ -23,7 +23,7 @@
         <img src="./assets/img/WeatherApp-2.svg" alt="Logo WeatherApp" class="logo">
         <div class="container-input">
             <input type="text" placeholder="Search for..." class="input">
-            <button type="search" class="btn-src">Search</button>
+            <button type="button" class="btn-src">Search</button>
         </div>
         <img src="./assets/img/world-search.svg" alt="Icon search" class="search-icon">
     </header>
@@ -31,28 +31,28 @@
         <section class="main-card">
             <h2 class="city">
                 <i class="fa-solid fa-location-dot"></i>
-                <span>New Westminster</span>
+                <span id="city"></span>
             </h2>
-            <p class="temp-condition">Partly Cloudy</p>
-            <p class="temperature"><span>10</span>&deg;C</p>
-            <img src="./assets/img/weather-icons/cloudy_snowing.svg" alt="Icons temperature conditions"
+            <p class="temp-condition"></p>
+            <p class="temperature"><span id="temperature"></span>&deg;C</p>
+            <img src="./assets/img/weather-icons/cloudy_snowing.svg" alt="Icon temperature condition"
                 class="temp-img">
         </section>
         <section class="more-info">
             <div class="wind-humidity">
                 <p class="wind">
                     <i class="fa-solid fa-wind"></i>
-                    <span>7m/s</span>
+                    <span id="wind"></span> m/s
                 </p>
-                <p id="umidity">
+                <p class="humidity">
                     <i class="fa-solid fa-droplet"></i>
-                    <span>58%</span>
+                    <span id="humidity"></span> %
                 </p>
             </div>
             <div class="temperature-range">
-                <p class="max-temp">Max. Temp. <span>12</span> &deg;C</p>
-                <p class="min-temp">Min. Temp. <span>3</span> &deg;C</p>
-                <p class="feels-like">Feels like <span>5</span> &deg;C</p>
+                <p class="max-temp">Max. Temp. <span id="max-temp"></span> &deg;C</p>
+                <p class="min-temp">Min. Temp. <span id="min-temp"></span> &deg;C</p>
+                <p class="feels-like">Feels like <span id="feels-like"></span> &deg;C</p>
             </div>
         </section>
     </main>
