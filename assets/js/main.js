@@ -14,6 +14,9 @@ const humidity = document.querySelector("#humidity");
 const maxTemp = document.querySelector("#max-temp");
 const minTemp = document.querySelector("#min-temp");
 const feelsLike = document.querySelector("#feels-like");
+const title = document.querySelector(".title");
+const mainCard = document.querySelector(".main-card");
+const moreInfo = document.querySelector(".more-info");
 
 let inputIsOpen = false;
 
@@ -32,6 +35,13 @@ const getWeatherInfo = async(city) => {
 
 const showWeatherInfo = async (city) => {
     const data = await getWeatherInfo(city);
+    // const title = document.querySelector(".title");
+    // const mainCard = document.querySelector(".main-card");
+    // const moreInfo = document.querySelector(".more-info");
+
+    title.classList.add("hide");
+    mainCard.classList.remove("hide");
+    moreInfo.classList.remove("hide");
 
     cityElement.innerHTML = data.name;
     tempConditions.innerHTML = data.weather[0].description;
@@ -57,8 +67,20 @@ btnMobile.addEventListener("click", ()=> {
 searchBtn.addEventListener("click", ()=>{
     const city = input.value;
 
-    showWeatherInfo(city);
+    if(city.length > 0) {
+        input.classList.remove("input-empty");
+        input.setAttribute("placeholder", "Search for a place..")
+        showWeatherInfo(city);
 
-    input.value = "";
+        input.value = "";
+    } else {
+        input.classList.add("input-empty");
+        input.setAttribute("placeholder", "Input can't be empty..")
+        title.classList.remove("hide");
+        mainCard.classList.add("hide");
+        moreInfo.classList.add("hide");
+    }
+
+    
 })
 

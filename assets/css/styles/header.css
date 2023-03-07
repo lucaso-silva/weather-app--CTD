@@ -39,8 +39,16 @@
 .input {
     padding: .35em 1em;
     border-radius: 10px;
-    /* width: 100%; */
     border: none;
+}
+
+.input-empty {
+    border: .135em solid var(--red);
+}
+
+.input-empty::placeholder {
+    font-weight: 700;
+    color: var(--red);
 }
 
 .btn-src {
@@ -87,6 +95,10 @@
         border-radius: 10px;
         width: 100%;
         border: none;
+    }
+
+    .input-empty {
+        border: .15em solid var(--red);
     }
 }
 

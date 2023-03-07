@@ -22,13 +22,14 @@
     <header class="header">
         <img src="./assets/img/WeatherApp-2.svg" alt="Logo WeatherApp" class="logo">
         <div class="container-input">
-            <input type="text" placeholder="Search for..." class="input">
+            <input type="text" placeholder="Search for a place..." class="input">
             <button type="button" class="btn-src">Search</button>
         </div>
         <img src="./assets/img/world-search.svg" alt="Icon search" class="search-icon">
     </header>
     <main class="main">
-        <section class="main-card">
+        <h1 class="title">Search for basic weather information from any place in the world!</h1>
+        <section class="main-card hide">
             <h2 class="city">
                 <i class="fa-solid fa-location-dot"></i>
                 <span id="city"></span>
@@ -37,7 +38,7 @@
             <p class="temperature"><span id="temperature"></span>&deg;C</p>
             <img src="" alt="Icon temperature condition" class="temp-img">
         </section>
-        <section class="more-info">
+        <section class="more-info hide">
             <div class="wind-humidity">
                 <p class="wind">
                     <i class="fa-solid fa-wind"></i>
