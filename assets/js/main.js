@@ -38,7 +38,11 @@ const showWeatherInfo = async (city) => {
 
   if (data.cod === "404") {
     errorMsg.classList.remove("hide");
+    
     title.classList.add("hide");
+    mainCard.classList.add("hide");
+    moreInfo.classList.add("hide");
+
   } else {
     title.classList.add("hide");
     errorMsg.classList.add("hide");
