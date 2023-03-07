@@ -21,7 +21,7 @@
     font-weight: 700;
     text-align: center;
     margin-top: 1.25em;
-    padding: .5em 0;
+    padding: .5em;
     border-radius: 10px;
     position: relative;
     color: var(--white);
@@ -38,6 +38,29 @@
     border-radius: 10px;
     z-index: -1;
     opacity: .5;
+}
+
+.error-msg {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-top: 1.25em;
+    padding: .5em;
+    border-radius: 10px;
+    position: relative;
+    color: var(--red);
+}
+
+.error-msg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: .5;
+    border: .125em solid var(--red);
 }
 
 .main-card {
