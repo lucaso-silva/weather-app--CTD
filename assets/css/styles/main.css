@@ -1,12 +1,19 @@
 .main {
-    background-image: url(../../img/bg-img-children.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     padding: 1.25em 2.5em;
     width: 100vw;
     height: 85vh;
     box-sizing: border-box;
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../../img/bg-img-children.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 .main-card {
@@ -21,9 +28,25 @@
     /* align-items: center;
     justify-items: start; */
     justify-items: start;
-    border-top: .1em solid var(--dark-blue); border-bottom: .1em solid var(--dark-blue);
+    border-bottom: .1em solid var(--dark-blue);
     padding: .5em 1.25em;
-    color: var(--dark-blue)
+    color: var(--dark-blue);
+    position: relative;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.main-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg-color);
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+    opacity: .4;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 .city {
@@ -70,6 +93,22 @@
     justify-content: space-between;
     font-size: .85rem;
     line-height: 1.35;
+    position: relative;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.more-info::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg-color);
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+    opacity: .4;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 @media screen and (min-width: 768px) {

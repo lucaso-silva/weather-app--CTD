@@ -35,12 +35,13 @@ const showWeatherInfo = async (city) => {
 
     cityElement.innerHTML = data.name;
     tempConditions.innerHTML = data.weather[0].description;
-    temperature.innerHTML = data.main.temp;
+    temperature.innerHTML = parseInt(data.main.temp);
+    temperatureIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
     wind.innerHTML = data.wind.speed;
     humidity.innerHTML = data.main.humidity;
-    maxTemp.innerHTML = data.main.temp_max;
-    minTemp.innerHTML = data.main.temp_min;
-    feelsLike.innerHTML = data.main.feels_like;
+    maxTemp.innerHTML = parseInt(data.main.temp_max);
+    minTemp.innerHTML = parseInt(data.main.temp_min);
+    feelsLike.innerHTML = parseInt(data.main.feels_like);
 }
 
 btnMobile.addEventListener("click", ()=> {
