@@ -90,7 +90,8 @@ I learned to use the selector `::before`, and so deal with background properties
 ```
 
 ### 🛠️ Continued development
-The next steps will be focused on coding refactoring. 
+<p>The next steps will be focused on coding refactoring.</p>
+
 ---
 ### Useful resources
 - [CSS-Tricks Guides](https://css-tricks.com/guides/) - Useful guides to learn and consult about CSS custom properties.
