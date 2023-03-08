@@ -18,18 +18,18 @@ const title = document.querySelector(".title");
 const mainCard = document.querySelector(".main-card");
 const moreInfo = document.querySelector(".more-info");
 const errorMsg = document.querySelector(".error-msg");
+const flag = document.querySelector(".flag");
 
 let inputIsOpen = false;
 
 const apiKey = "fa2e6e57dabe312d59e71999ddcd4ce6";
-// const apiCountryURL = "https://countryflagsapi.com/png/"
 
 const getWeatherInfo = async (city) => {
   const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
   const response = await fetch(apiWeatherURL);
   const data = response.json();
-
+  console.log(data);
   return data;
 };
 
@@ -59,6 +59,7 @@ const showWeatherInfo = async (city) => {
     moreInfo.classList.remove("hide");
 
     cityElement.innerHTML = data.name;
+    flag.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`)
     tempConditions.innerHTML = data.weather[0].description;
     temperature.innerHTML = parseInt(data.main.temp);
     temperatureIcon.setAttribute(

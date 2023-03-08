@@ -112,6 +112,11 @@
     margin-bottom: .25em;
 }
 
+.flag {
+    width: 20px;
+    margin-left: .25em;
+}
+
 .temp-condition {
     grid-area: condit;
     align-self: center;
